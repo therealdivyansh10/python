@@ -1,0 +1,1 @@
+screen.onkey(player.goup,"Up")

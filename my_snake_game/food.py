@@ -1,20 +1,20 @@
 from turtle import Turtle
 import random
-from snake import Snake
 class Food(Turtle):
     def __init__(self):
         super().__init__()
-        self=Turtle(shape="circle")
-        self.penup()
-        self.speed("fastest")
+        self.create_food()
+    
+    def create_food(self):
         self.color("red")
-        self.shapesize(0.5)
+        self.shape("circle")
+        self.speed("fastest")
+        self.shapesize(stretch_len=0.5,stretch_wid=0.5)
+        self.foodpos()
+    
+    def foodpos(self):
         self.penup()
-        self.pos()
-        
-    def positions(self):
-        xpos=random.randint(-290,290)
-        ypos=random.randint(-290,290)
-        self.goto(xpos,ypos)
-        
-            
+        x=random.randint(-290,290)
+        y=random.randint(-290,290)
+        self.goto(x,y)
+    
